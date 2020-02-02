@@ -3,10 +3,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import RenderRoute from '../../utils/render-route'
 
-export default function Calculators(props) {
+export default function Generators(props) {
   return (
     <div className="calculators">
-      <h2>Calculators</h2>
+      <h2>Generators</h2>
       <ol>
         {props.routes.map((route, i) => (
           <li key={i}>

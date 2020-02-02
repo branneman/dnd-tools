@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import { Link, BrowserRouter as Router } from 'react-router-dom'
+import RenderRoute from '../utils/render-route'
 import routes from './routes.js'
+
 import './index.css'
 import Navigation from '../molecules/Navigation'
 
@@ -16,17 +18,7 @@ export default function App() {
           <Navigation routes={routes} />
         </div>
         <div className="grid__body">
-          <Switch>
-            {routes.map((route, i) => (
-              <Route
-                key={i}
-                path={route.path}
-                render={props => (
-                  <route.component {...props} routes={route.routes} />
-                )}
-              />
-            ))}
-          </Switch>
+          <RenderRoute routes={routes} />
         </div>
       </div>
     </Router>

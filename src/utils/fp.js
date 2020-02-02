@@ -70,7 +70,10 @@ export const distinct = xs =>
     [],
     xs
   )
-export const update = curry((key, val, xs) => ((xs[key] = val), xs))
+export const update = curry((key, val, xs) => {
+  xs[key] = val
+  return xs
+})
 
 // Logic & Relation
 export const not = a => !a
@@ -117,7 +120,10 @@ export const keys = obj => Object.keys(obj)
 export const values = obj => Object.values(obj)
 export const entries = obj => Object.entries(obj)
 export const prop = curry((key, obj) => obj[key])
-export const assoc = curry((key, val, obj) => ((obj[key] = val), obj))
+export const assoc = curry((key, val, obj) => {
+  obj[key] = val
+  return obj
+})
 export const pick = curry((keys, obj) =>
   foldl(
     (acc, curr) => (obj[curr] ? ((acc[curr] = obj[curr]), acc) : acc),
