@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import routes from './routes.js'
 import './index.css'
@@ -10,6 +10,9 @@ export default function App() {
     <Router>
       <div className="grid__container">
         <div className="grid__nav">
+          <h1 className="site-title">
+            <Link to={'/'}>DnD Tools</Link>
+          </h1>
           <Navigation routes={routes} />
         </div>
         <div className="grid__body">
