@@ -49,7 +49,9 @@ h3 {
 }
 .grid__body {
   width: 100%;
+  padding: 0.35em 2em;
   background: lightgrey;
+  overflow-y: scroll;
 }
 
 .site-title {
