@@ -44,7 +44,7 @@ h3 {
 }
 .grid__nav {
   width: 17em;
-  border-right: 1px solid #666;
+  border-right: 1px solid #bad;
   background: grey;
 }
 .grid__body {
