@@ -1,9 +1,27 @@
 import Fuse from 'fuse.js'
 import { flatten } from '../../../utils/fp'
 
+import createActionEngine from './engines/action'
+import createConditionEngine from './engines/condition'
+import createDeityEngine from './engines/deity'
+import createDiseaseEngine from './engines/disease'
+import createFeatEngine from './engines/feat'
+import createHazardEngine from './engines/hazard'
+import createItemEngine from './engines/item'
 import createSpellEngine from './engines/spell'
+import createTrapEngine from './engines/trap'
 
-const engines = [createSpellEngine(createEngine)]
+const engines = [
+  createActionEngine(createEngine),
+  createConditionEngine(createEngine),
+  createDeityEngine(createEngine),
+  createDiseaseEngine(createEngine),
+  createFeatEngine(createEngine),
+  createHazardEngine(createEngine),
+  createItemEngine(createEngine),
+  createSpellEngine(createEngine),
+  createTrapEngine(createEngine)
+]
 
 /**
  * @param {String} query
