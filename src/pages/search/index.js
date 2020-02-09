@@ -5,7 +5,7 @@ import useDebounce from '../../hooks/use-debounce'
 
 import './index.css'
 
-const worker = new Worker('./worker.js', { type: 'module' })
+const worker = new Worker('./worker/index.js', { type: 'module' })
 
 const capitalise = s => `${s.substr(0, 1).toUpperCase()}${s.substr(1)}`
 
